@@ -7,7 +7,7 @@ export class UserDto {
 
   @IsString()
   name: string;
-
+  
   @IsString()
   last_name: string;
 

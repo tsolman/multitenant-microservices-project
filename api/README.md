@@ -1,4 +1,4 @@
-# Multitenant project
+# Multitenant API
 
 ## Installation
 

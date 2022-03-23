@@ -1,7 +1,6 @@
 import { Controller, Post, Get, Body, ValidationPipe } from '@nestjs/common';
 import { map } from 'rxjs';
 import { CreateConfigRequest } from '../payloads/create-config.request';
-import { CreateUserRequest } from '../payloads/create-user.request';
 import { GetConfigRequest } from '../payloads/get-config.request';
 import { ReadConfigRequest } from '../payloads/read-config.request';
 import { Roles } from '../roles.decorator';
@@ -14,7 +13,7 @@ export class UsersController {
   constructor(private userService: UserService) {}
 
   @Post('/')
-  create(@Body() user: CreateUserRequest): Promise<UserDto> {
+  create(@Body() user: UserDto): Promise<UserDto> {
     return this.userService.create(user);
   }
 
